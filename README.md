@@ -3,8 +3,11 @@
 This is an example of the binding to the *device cordova plugin*. See the
 binding [here](https://github.com/dannywillems/ocaml-cordova-plugin-device)
 
-This application shows the device informations in a simple web page generated
+This application shows the device informations in a simple alert generated
 with js_of_ocaml.
+
+**The application isn't working because the deviceready isn't caught. I have no
+idea why for now**
 
 ## How to compile ?
 
