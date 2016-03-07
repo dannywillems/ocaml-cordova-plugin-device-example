@@ -7,6 +7,8 @@ let on_device_ready _ =
     "\nuuid: " ^
     (Js.to_string Device.device##.uuid) ^
     "\ncordova version: " ^
+    (Js.to_string Device.device##.cordova) ^
+    "\nmodel version: " ^
     (Js.to_string Device.device##.model) ^
     "\nmanufacter: " ^
     (Js.to_string Device.device##.manufacter) ^
