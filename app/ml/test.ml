@@ -1,5 +1,5 @@
 let on_device_ready _ =
-  let d : Device.device Js.t = Js.Unsafe.js_expr ("device") in
+  let d = Device.device () in
   let text =
     "platform: " ^
     (Js.to_string d##.platform) ^
