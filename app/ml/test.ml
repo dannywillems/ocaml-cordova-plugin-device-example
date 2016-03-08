@@ -11,7 +11,7 @@ let on_device_ready _ =
     (Js.to_string d##.cordova) ^
     "\nmodel version: " ^
     (Js.to_string d##.model) ^
-    "\nmanufacter: " ^
+    "\nmanufacturer: " ^
     (Js.to_string d##.manufacturer) ^
     "\nserial: " ^
     (Js.to_string d##.serial)
