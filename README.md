@@ -6,9 +6,6 @@ binding [here](https://github.com/dannywillems/ocaml-cordova-plugin-device)
 This application shows the device informations in a simple alert generated
 with js_of_ocaml.
 
-**The application isn't working because the deviceready isn't caught. I have no
-idea why for now**
-
 ## How to compile ?
 
 Read the section 'Using js_of_ocaml to develop in OCaml on mobile' first.
