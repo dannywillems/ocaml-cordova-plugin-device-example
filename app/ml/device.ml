@@ -18,10 +18,8 @@ class type device =
     method isVirtual : bool Js.t Js.readonly_prop
 
     (* Manufacter *)
-    method manufacter : Js.js_string Js.t Js.readonly_prop
+    method manufacturer : Js.js_string Js.t Js.readonly_prop
 
     (* Serial *)
     method serial : Js.js_string Js.t Js.readonly_prop
   end
-
-let device : device Js.t = Js.Unsafe.js_expr ("device")

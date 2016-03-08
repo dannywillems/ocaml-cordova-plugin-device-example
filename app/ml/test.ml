@@ -1,21 +1,23 @@
 let on_device_ready _ =
+  let d : Device.device Js.t = Js.Unsafe.js_expr ("device") in
   let text =
     "platform: " ^
-    (Js.to_string Device.device##.platform) ^
+    (Js.to_string d##.platform) ^
     "\nversion: " ^
-    (Js.to_string Device.device##.version) ^
+    (Js.to_string d##.version) ^
     "\nuuid: " ^
-    (Js.to_string Device.device##.uuid) ^
+    (Js.to_string d##.uuid) ^
     "\ncordova version: " ^
-    (Js.to_string Device.device##.cordova) ^
+    (Js.to_string d##.cordova) ^
     "\nmodel version: " ^
-    (Js.to_string Device.device##.model) ^
+    (Js.to_string d##.model) ^
     "\nmanufacter: " ^
-    (Js.to_string Device.device##.manufacter) ^
+    (Js.to_string d##.manufacturer) ^
     "\nserial: " ^
-    (Js.to_string Device.device##.serial) in
+    (Js.to_string d##.serial)
+  in
   Dom_html.window##alert (Js.string text);
-  Js._true
+  Js._false
 
 let _ =
   Dom.addEventListener Dom_html.document (Dom.Event.make "deviceready")
