@@ -1,20 +1,20 @@
 let on_device_ready _ =
-  let d = Device.device () in
+  let d = Device.t () in
   let text =
     "platform: " ^
-    (Js.to_string d##.platform) ^
+    d#platform ^
     "\nversion: " ^
-    (Js.to_string d##.version) ^
+    d#version ^
     "\nuuid: " ^
-    (Js.to_string d##.uuid) ^
+    d#uuid ^
     "\ncordova version: " ^
-    (Js.to_string d##.cordova) ^
+    d#cordova ^
     "\nmodel version: " ^
-    (Js.to_string d##.model) ^
+    d#model ^
     "\nmanufacturer: " ^
-    (Js.to_string d##.manufacturer) ^
+    d#manufacturer ^
     "\nserial: " ^
-    (Js.to_string d##.serial)
+    d#serial
   in
   Dom_html.window##alert (Js.string text);
   Js._false
