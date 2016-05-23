@@ -1,5 +1,5 @@
 let on_device_ready _ =
-  let d = Device.t () in
+  let d = Cordova_device.t () in
   let text =
     "platform: " ^
     d#platform ^
