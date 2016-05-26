@@ -16,9 +16,9 @@ let on_device_ready _ =
     "\nserial: " ^
     d#serial
   in
-  Dom_html.window##alert (Js.string text);
-  Js._false
+  Jsoo_lib.alert text
 
 let _ =
-  Dom.addEventListener Dom_html.document (Dom.Event.make "deviceready")
-(Dom_html.handler on_device_ready) Js._false
+  Cordova.Event.device_ready on_device_ready;
+  Cordova.Event.add_event_listener Cordova.Event.Vol_up_button on_device_ready
+  false
